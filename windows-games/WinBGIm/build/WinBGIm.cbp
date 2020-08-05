@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="WinBGIm" />
+		<Option makefile="makefile" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../lib/bgi" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../.objs/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Release;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-fno-rtti" />
+			<Add option="-fno-exceptions" />
+		</Compiler>
+		<Unit filename="../src/dibapi.h" />
+		<Unit filename="../src/dibutil.cxx" />
+		<Unit filename="../src/dibutil.h" />
+		<Unit filename="../src/drawing.cxx" />
+		<Unit filename="../src/file.cxx" />
+		<Unit filename="../src/misc.cxx" />
+		<Unit filename="../src/mouse.cxx" />
+		<Unit filename="../src/palette.cxx" />
+		<Unit filename="../src/text.cxx" />
+		<Unit filename="../src/winbgi.cxx" />
+		<Unit filename="../src/winbgim.h" />
+		<Unit filename="../src/winbgitypes.h" />
+		<Unit filename="../src/winthread.cxx" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

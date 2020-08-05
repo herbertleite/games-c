@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="testbgi" />
+		<Option makefile="makefile" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="test-simple Release">
+				<Option output="../bin/Release/test-simple" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../.objs/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="test-simple Debug">
+				<Option output="../bin/Debug/test-simple" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../.objs/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="test-simple Release;test-simple Debug;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../include" />
+		</Compiler>
+		<Linker>
+			<Add library="bgi" />
+			<Add library="gdi32" />
+			<Add library="comdlg32" />
+			<Add library="uuid" />
+			<Add library="oleaut32" />
+			<Add library="ole32" />
+			<Add directory="../lib" />
+		</Linker>
+		<Unit filename="../all-tests/test-simple.cxx" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
